@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'cont/home'
+
+  get 'cont/about'
+
   resources :books
 
   resources :authors
