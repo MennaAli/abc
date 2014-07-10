@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'cont/help'
+
   get 'cont/home'
 
   get 'cont/about'
