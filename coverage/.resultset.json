@@ -1,0 +1,73 @@
+{
+  "RSpec": {
+    "coverage": {
+      "C:/Users/I C/Desktop/testing/abc/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "C:/Users/I C/Desktop/testing/abc/app/helpers/authors_helper.rb": [
+        1,
+        null
+      ],
+      "C:/Users/I C/Desktop/testing/abc/app/helpers/books_helper.rb": [
+        1,
+        null
+      ],
+      "C:/Users/I C/Desktop/testing/abc/app/helpers/cont_helper.rb": [
+        1,
+        null
+      ],
+      "C:/Users/I C/Desktop/testing/abc/app/helpers/libraries_helper.rb": [
+        1,
+        null
+      ],
+      "C:/Users/I C/Desktop/testing/abc/app/models/author.rb": [
+        1,
+        1,
+        0,
+        null,
+        null,
+        1,
+        1,
+        0,
+        null,
+        1,
+        1,
+        null
+      ],
+      "C:/Users/I C/Desktop/testing/abc/app/models/book.rb": [
+        1,
+        1,
+        0,
+        null,
+        null,
+        1,
+        1,
+        0,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "C:/Users/I C/Desktop/testing/abc/app/models/library.rb": [
+        1,
+        1,
+        0,
+        null,
+        null,
+        1,
+        1,
+        0,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1404986434
+  }
+}

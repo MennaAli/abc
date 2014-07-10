@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
-  get 'cont/help'
 
-  get 'cont/home'
+  get 'HomePage/home'
 
-  get 'cont/about'
+  get 'HomePage/about'
+
+  get 'HomePage/location'
+
+  get 'HomePage/contact'
 
   resources :books
 
