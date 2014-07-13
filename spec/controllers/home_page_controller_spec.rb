@@ -1,7 +1,7 @@
 
 require 'rails_helper'
 
-RSpec.describe ContController, :type => :controller do
+RSpec.describe HomePageController, :type => :controller do
 
   describe "GET 'home'" do
     it "returns http success" do
@@ -10,9 +10,9 @@ RSpec.describe ContController, :type => :controller do
     end
   end
 
-  describe "GET 'help'" do
+  describe "GET 'about'" do
     it "returns http success" do
-      get 'help'
+      get 'about'
       expect(response).to be_success
     end
   end
