@@ -18,7 +18,8 @@ RSpec.describe "Users", :type => :request do
  it "should have the title 'Demo | Sign up'" do 
   			visit signup_path
   		
-        expect(page).to have_title('full_title("Sign up")')
+        expect(page).to have_title(full_title("Sign up"))
+        
   end 			
   end 
  

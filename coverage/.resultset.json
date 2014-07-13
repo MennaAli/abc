@@ -6,11 +6,11 @@
         null,
         null,
         1,
+        10,
+        10,
         3,
-        3,
-        0,
         null,
-        3,
+        7,
         null,
         null,
         null
@@ -43,8 +43,11 @@
         1,
         null
       ],
-      "C:/Users/I C/Desktop/testing/abc/app/controllers/users_controller.rb": [
+      "C:/Users/I C/Desktop/testing/abc/app/controllers/blogs_controller.rb": [
         1,
+        1,
+        null,
+        null,
         1,
         null,
         null
@@ -55,8 +58,14 @@
         null,
         1,
         null
+      ],
+      "C:/Users/I C/Desktop/testing/abc/app/controllers/users_controller.rb": [
+        1,
+        1,
+        null,
+        null
       ]
     },
-    "timestamp": 1405249836
+    "timestamp": 1405252585
   }
 }
