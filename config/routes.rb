@@ -1,5 +1,16 @@
 Rails.application.routes.draw do
 
+  get 'users/new'
+
+
+  get 'blogs/home'
+
+  get 'blogs/about'
+
+  get 'blog/home'
+
+  get 'blog/about'
+
   get 'home_page/home'
 
   get 'home_page/about'
