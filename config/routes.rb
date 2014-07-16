@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get '/signup' => 'users#new'
+  get '/signup' => 'users#new' #
 
   root 'blogs#home'
 
@@ -17,6 +17,11 @@ Rails.application.routes.draw do
   get 'home_page/location'
 
   get 'home_page/contact'
+
+  get 'users/show'
+
+
+resources :users
 
   resources :books
 
