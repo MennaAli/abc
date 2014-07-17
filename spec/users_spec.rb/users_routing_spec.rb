@@ -1,34 +1,34 @@
 require "rails_helper"
 
-RSpec.describe AuthorsController, :type => :routing do
+RSpec.describe UsersController, :type => :routing do
   describe "routing" do
 
     it "routes to #index" do
-      expect(:get => "/authors").to route_to("authors#index")
+      expect(:get => "/users").to route_to("users#index")
     end
 
     it "routes to #new" do
-      expect(:get => "/authors/new").to route_to("authors#new")
+      expect(:get => "/users/new").to route_to("users#new")
     end
 
     it "routes to #show" do
-      expect(:get => "/authors/1").to route_to("authors#show", :id => "1")
+      expect(:get => "/users/1").to route_to("users#show", :id => "1")
     end
 
     it "routes to #edit" do
-      expect(:get => "/authors/1/edit").to route_to("authors#edit", :id => "1")
+      expect(:get => "/users/1/edit").to route_to("users#edit", :id => "1")
     end
 
     it "routes to #create" do
-      expect(:post => "/authors").to route_to("authors#create")
+      expect(:post => "/users").to route_to("users#create")
     end
 
     it "routes to #update" do
-      expect(:put => "/authors/1").to route_to("authors#update", :id => "1")
+      expect(:put => "/users/1").to route_to("users#update", :id => "1")
     end
 
     it "routes to #destroy" do
-      expect(:delete => "/authors/1").to route_to("authors#destroy", :id => "1")
+      expect(:delete => "/users/1").to route_to("users#destroy", :id => "1")
     end
 
   end

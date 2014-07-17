@@ -8,5 +8,11 @@ RSpec.describe UsersController, :type => :controller do
       expect(response).to be_success
     end
   end
+  describe "Get 'show'" do
+    it "returns http success" do
+      get 'show'
+      expect(response).to be_success
+    end
+  end
 
 end

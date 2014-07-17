@@ -18,7 +18,6 @@ Rails.application.routes.draw do
 
   get 'home_page/contact'
 
-  get 'users/show'
 
 
 resources :users
