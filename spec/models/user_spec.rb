@@ -55,6 +55,7 @@ describe "when email format is valid" do
 end
 describe "when email is already taken" do 
   before do
+  	@user.save
   	User_with_same_email = @user.dup # taking  a copy from the @user 
   	User_with_same_email.email = @user.email.upcase 
   	User_with_same_email.save #this new user is the one i am going to check on it 

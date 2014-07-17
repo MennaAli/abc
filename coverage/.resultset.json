@@ -6,11 +6,11 @@
         null,
         null,
         1,
-        0,
-        0,
-        0,
+        10,
+        10,
+        3,
         null,
-        0,
+        7,
         null,
         null,
         null
@@ -43,6 +43,80 @@
         1,
         null
       ],
+      "C:/Users/I C/Desktop/testing/abc/app/controllers/blogs_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "C:/Users/I C/Desktop/testing/abc/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "C:/Users/I C/Desktop/testing/abc/app/controllers/users_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        0,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "C:/Users/I C/Desktop/testing/abc/app/models/author.rb": [
+        1,
+        1,
+        0,
+        null,
+        null,
+        1,
+        1,
+        0,
+        null,
+        1,
+        1,
+        null
+      ],
+      "C:/Users/I C/Desktop/testing/abc/app/models/book.rb": [
+        1,
+        1,
+        0,
+        null,
+        null,
+        1,
+        1,
+        0,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "C:/Users/I C/Desktop/testing/abc/app/models/library.rb": [
+        1,
+        1,
+        0,
+        null,
+        null,
+        1,
+        1,
+        0,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "C:/Users/I C/Desktop/testing/abc/app/models/user.rb": [
         1,
         null,
@@ -52,9 +126,9 @@
         1,
         null,
         null,
+        2,
         1,
-        1,
-        19,
+        20,
         null,
         null,
         null,
@@ -71,6 +145,6 @@
         null
       ]
     },
-    "timestamp": 1405421096
+    "timestamp": 1405585410
   }
 }
