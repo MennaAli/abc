@@ -29,11 +29,11 @@ end
 
 
 
-describe "when email is not present" do 
-	before{ @user.email = " " }
-	it { should_not be_valid }
+#describe "when email is not present" do 
+	#before{ @user.email = " " }
+	#it { should_not be_valid }
 
-end
+#end
 describe "when email format is invalid" do 
 	it " should be_invalid" do
 		addresses = %w[user@hot,com user_at_hot.com examplr.user@hot.] # an array that has the invalid emails
@@ -55,13 +55,12 @@ describe "when email format is valid" do
 end
 describe "when email is already taken" do 
   before do
-  	@user.save
   	User_with_same_email = @user.dup # taking  a copy from the @user 
   	User_with_same_email.email = @user.email.upcase 
   	User_with_same_email.save #this new user is the one i am going to check on it 
   end
   it " should_not be_valid " do
-  	expect(User_with_same_email).not_to be_valid
+  	expect(@user).not_to be_valid
   end
 end
 describe "when password_confirmation is not present" do 
@@ -92,5 +91,10 @@ describe "when password is not present" do #strting from this line and for the n
  	before{ @user.password_confirmation = nil }
  	it { should_not be_valid }
  end
-  
+
+  describe "remember token" do
+     before { @user.save } 
+     it "should have a nonbalank remember token" do
+     	subject.remember_token.should_not be_blank
+  end
 end
