@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get '/signup' => 'users#new' #
 
   get '/signin'  => 'sessions#new'
-   get'signout' => 'sessions#destroy' via: :delete
+ get '/signout' => 'sessions#destroy' , via: :delete
 
   root 'blogs#home'
 
