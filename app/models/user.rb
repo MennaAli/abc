@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
 
 
     before_save { |user| user.email = user.email.downcase }
-     before_save :creat_remember_token 
+     before_save:create_remember_token 
      before_validation do |user| 
        user.name = "random" if user.name.blank? 
   	  end

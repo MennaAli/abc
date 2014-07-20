@@ -2,8 +2,8 @@ Rails.application.routes.draw do
 
   get '/signup' => 'users#new' #
 
-  get '/signin'  => 'sessions#new'
- get '/signout' => 'sessions#destroy' , via: :delete
+  
+ delete '/signout' => 'sessions#destroy'
 
   root 'blogs#home'
 
@@ -30,7 +30,7 @@ resources :users
   resources :authors
 
   resources :libraries
-  resources :sessions , only: [:new, :create, :destroy]
+  resources :sessions , only: [:create, :destroy]
 
 
 

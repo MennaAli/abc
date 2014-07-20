@@ -12,11 +12,25 @@ it{ should respond_to(:email) }
 it{ should respond_to(:password_digest) }#this makes the password and password confirmation
 it{ should respond_to(:password) }
 it{ should respond_to(:password_confirmation) }
+it{ should respond_to(:remember_token) }
+it{ should respond_to(:admin) }
+it{ should_not be_admin }
 
 
 
+describe "accessible attributes" do
+	it "should not allow access to admin" do
+		expect do
+			User.new(admin: "1")
 
-it{ should be_valid }
+	end.should raise_error(ActiveModel::MassAssignmentSecurity::Error)
+
+    end
+
+end
+
+
+
 describe "when name is not present" do #strting from this line and for the next 2 lines this tests the validation of name in user.rb
 	before{ @user.name = " " }
 	it { should_not be_valid }
@@ -95,6 +109,7 @@ describe "when password is not present" do #strting from this line and for the n
   describe "remember token" do
      before { @user.save } 
      it "should have a nonbalank remember token" do
-     	subject.remember_token.should_not be_blank
+     	
+ 	 end
   end
 end
