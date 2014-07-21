@@ -20,9 +20,8 @@ class UsersController < ApplicationController
    	@user = User.new(user_params)
    	if @user.save
       sign_in @user
-      redirect_back_or user
+      redirect_back_or @user
    		flash[:notice] = "User successfully created"
-   		redirect_to @user
    	else
   		render 'new' 
   	end

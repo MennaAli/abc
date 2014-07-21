@@ -4,4 +4,10 @@ class BlogsController < ApplicationController
 
   def about
   end
+
+  def Location
+  end
+
+  def Contact
+  end
 end
