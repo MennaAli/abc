@@ -6,11 +6,11 @@
         null,
         null,
         1,
-        128,
-        128,
-        50,
+        137,
+        137,
+        53,
         null,
-        78,
+        84,
         null,
         null,
         null
@@ -52,7 +52,7 @@
         null,
         null,
         1,
-        548,
+        566,
         null,
         null,
         1,
@@ -67,7 +67,7 @@
         null,
         null,
         1,
-        298,
+        316,
         null,
         null,
         null,
@@ -91,9 +91,9 @@
         1,
         null,
         1,
-        98,
-        98,
-        98,
+        101,
+        101,
+        101,
         null,
         null
       ],
@@ -130,7 +130,7 @@
         null,
         null,
         1,
-        38,
+        41,
         null,
         null,
         null,
@@ -247,6 +247,10 @@
         null,
         null
       ],
+      "C:/Users/I C/Desktop/testing/abc/app/models/post.rb": [
+        1,
+        null
+      ],
       "C:/Users/I C/Desktop/testing/abc/app/models/user.rb": [
         1,
         null,
@@ -254,12 +258,12 @@
         null,
         1,
         1,
+        1,
         null,
-        null,
-        52,
+        84,
         1,
         1,
-        69,
+        85,
         null,
         null,
         null,
@@ -275,7 +279,7 @@
         null,
         1,
         1,
-        51,
+        83,
         null,
         null,
         null,
@@ -301,6 +305,6 @@
         null
       ]
     },
-    "timestamp": 1405933027
+    "timestamp": 1405938764
   }
 }

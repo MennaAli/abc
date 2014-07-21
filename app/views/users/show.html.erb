@@ -1,9 +1,17 @@
 <% provide(:title, @user.name) %>
 <div calass ="row">
-	<aside class=:span4">
+	<aside class="span4">
 		<section>
 <h1>
 	<%= gravatar_for @user %> 
 	<%= @user.name %>
 </h1>
+<div class="span8">
+	<% if @user.posts.any? %>
+	<h3>posts (<%= @user.posts.count %>)</h3>
+	<ol class="posts">
+		<%= render @user.posts %>
+
+	<% end %>
+</div>
 </section>

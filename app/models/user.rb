@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
 	#should not be more than 40 charachters ,where presence has  a hasher it  which is what aft and length also takes a hash 
    EMAIL_CORRECT_FORMAT = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i #starting from \A is te beginning of the string the contains the correct format of an email
 	has_secure_password #it create sthe library has_secure_password w we add it in the gem file and creates password and password_confirmation
-
+      has_many :posts ,dependent: :destroy
 
     before_save { |user| user.email = user.email.downcase }
      before_save:create_remember_token 
