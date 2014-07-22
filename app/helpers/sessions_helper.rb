@@ -43,4 +43,14 @@ module SessionsHelper
        redirect_to (session[:return_to] || default)
        session.delete(:return_to)
      end
+
+     def signed_in_user
+    
+    unless signed_in?
+      flash[:error] = "Please sign in."
+      store_location
+    redirect_to root_path  
+     end
+
+   end 
 end

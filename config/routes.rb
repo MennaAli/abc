@@ -9,9 +9,9 @@ Rails.application.routes.draw do
 
   get '/about' => 'blogs#about'
 
-  get 'blog/home'
+  get 'blogs/home'
 
-  get 'blog/about'
+  get 'blogs/about'
 
   get 'home_page/home'
 
@@ -23,7 +23,8 @@ Rails.application.routes.draw do
 
 
 
-resources :users
+  resources :users
+  resources :posts , only: [:create, :destroy]
 
   resources :books
 

@@ -6,8 +6,29 @@ RSpec.describe "Blogs", :type => :request do
   		it "should have the content 'Hello, world!'" do 
   			visit root_path
   			page.should have_content("This is our blog's homepage.")
-  			
- end 	
+
+      end
+
+        describe "for signed_in user" do
+          let(:user) { FactoryGirl.create(:user) }
+
+          before do
+            FactoryGirl.create(:post, user: user, content: "Menna")
+            FactoryGirl.create(:post, user: user, content: "Lorem ipsum")
+            sign_in user
+            visit root_path
+
+          end
+
+          it "should render the user's feed " do
+             user.feed.each do |item|
+              page.should have_selector("li##{item.id}", text: item.content)
+
+             end
+          end
+
+        end
+  				
 
  it "should have the h1 'Hello, world!'" do 
   			visit root_path

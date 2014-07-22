@@ -23,6 +23,10 @@ class User < ActiveRecord::Base
 		User.where("length(name) > 8")
 	end
 
+	def feed
+      Post.where("user_id = ?", id)
+	end
+
 	private
 	def create_remember_token
 		self.remember_token = SecureRandom.urlsafe_base64

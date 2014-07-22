@@ -97,6 +97,18 @@ end
         end
 
     end
+
+            describe " in the posts controller " do
+                 describe " submitting to the create action " do
+                  before { post posts_path }
+                    specify { response.should redirect_to(root_path)}
+            end
+              before { delete post_path(FactoryGirl.create(:post)) }
+              specify { response.should redirect_to(root_path)}
+            
+
+          end
+
     describe "as wrong user" do
      	let(:user) { FactoryGirl.create(:user) }
      	let(:wrong_user) { FactoryGirl.create(:user, email: "wrong@example.com") }
@@ -130,6 +142,6 @@ end
 
        end
     end	
-    end
-
+  end
 end
+

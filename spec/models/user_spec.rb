@@ -14,12 +14,17 @@ it{ should respond_to(:password) }
 it{ should respond_to(:password_confirmation) }
 it{ should respond_to(:remember_token) }
 it{ should respond_to(:admin) }
-it{ should respond_to(:microposts) }
+it{ should respond_to(:posts) }
+it{ should respond_to(:feed) }
 it{ should_not be_admin }
 
 
 
+describe "with admin attributes set to 'true'" do
+	before { @user.toggle!(:admin) }
+	it { should be_admin }
 
+end
 
 
 describe "when name is not present" do #strting from this line and for the next 2 lines this tests the validation of name in user.rb
@@ -63,6 +68,8 @@ describe "when email is already taken" do
   	User_with_same_email = @user.dup # taking  a copy from the @user 
   	User_with_same_email.email = @user.email.upcase 
   	User_with_same_email.save #this new user is the one i am going to check on it 
+  	puts User_with_same_email.inspect
+  	puts User_with_same_email.errors.inspect
   end
   it " should_not be_valid " do
   	expect(@user).not_to be_valid
@@ -99,32 +106,49 @@ describe "when password is not present" do #strting from this line and for the n
 
   describe "remember token" do
      before { @user.save } 
-     it "should have a nonbalank remember token" do
-     	
+     it "should have a nonbalank remember token" do	
  	 end
   end
-   describe "micropost association"
+   describe "post association" do
 
    before { @user.save}
-   let!(:older_micropost) do
-   	FactoryGirl.create(:micropost, user: @user , created_at: 1.day.ago)
+   let!(:older_post) do
+   	FactoryGirl.create(:post, user: @user , created_at: 1.day.ago)
 
    end
-    let!(:newer_micropost) do
-     FactoryGirl.create(:micropost, user: @user , created_at: 1.hour.ago)
+    let!(:newer_post) do
+     FactoryGirl.create(:post, user: @user , created_at: 1.hour.ago)
 
       end
 
-    it "should have the right microposts in the right order" do
-     @user.microposts.should == [newer_misropost, older_micropost]
+    it "should have the right posts in the right order" do
+     @user.posts.should == [newer_post, older_post]
     end
-     it "should destroy associated microposts" do
-     	microposts = @user.microposts
+     it "should destroy associated posts" do
+     	posts = @user.posts
      	@user.destroy
-     	microposts.each do |micropost|
-     		Micropost.find_by_id(micropost.id).should be_nil
+     	posts.each do |post|
+     		Post.find_by_id(post.id).should be_nil
 
      	end
 
      end
+     describe "status" do
+     	let(:unfollowed_post) { FactoryGirl.create(:post, user: FactoryGirl.create(:user)) }
+
+
+        it "the newer post is included " do
+        	expect(@user.feed).to include(newer_post)
+        end
+        it " the older post is included" do
+         expect(@user.feed).to include(older_post)
+
+        end
+
+        it " the followed post is not included" do
+            expect(@user.feed).not_to include(unfollowed_post)
+
+        end
+     end	
+end
 end
