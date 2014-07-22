@@ -35,7 +35,7 @@ RSpec.describe Post, :type => :model do
 
     describe "with content that is too long"  do
 
-      before { @post.content = "a" * 141 }
+      before { @post.content = "a" * 21 }
       it { should_not be_valid }
     end
 end

@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
    EMAIL_CORRECT_FORMAT = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i #starting from \A is te beginning of the string the contains the correct format of an email
 	has_secure_password #it create sthe library has_secure_password w we add it in the gem file and creates password and password_confirmation
       has_many :posts ,dependent: :destroy
+      has_many :relationships , foreign_key: "follower_id", dependent: :destroy
 
     before_save { |user| user.email = user.email.downcase }
      before_save:create_remember_token 
